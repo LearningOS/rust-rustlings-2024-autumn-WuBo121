@@ -9,20 +9,20 @@
 
 
 trait AppendBar {
-    fn append_bar(self) -> Self;
+    fn append_bar(self) -> String;
 }
 
 impl AppendBar for String {
     // TODO: Implement `AppendBar` for type `String`.
-    fn append_bar(self)->Self{
+    fn append_bar(self)->String{
         format!("{}Bar",self)
     }
 }
 
 fn main() {
     let s = String::from("Foo");
-    let s = s.append_bar();
-    println!("s: {}", s);
+    let s_appended = s.append_bar();
+    println!("s: {}", s_appended);
 }
 
 #[cfg(test)]
